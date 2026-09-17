@@ -76,11 +76,12 @@
 		</div>
 		
 		<div class="grilla-productos">
-			<!-- Producto 1 -->
+
 			<article class="producto-card">
-				<img src="img/te.avif" alt="Té Vital">
+				<img src="img/te-vital.jpg" alt="Té Vital">
 				<h3>Té Vital</h3>
 				<p>Mezcla natural para comenzar el día con energía.</p>
+				<span class="precio-producto">$25.000 COP</span>
 				<div class="cantidad-contenedor">
 					<button class="btn-cantidad" onclick="cambiarCantidad('cant-1', -1)">-</button>
 					<input type="text" id="cant-1" class="input-cantidad" value="1" readonly>
@@ -88,15 +89,15 @@
 				</div>
 				<div class="acciones-producto">
 					<button class="btn-agregar-cart" onclick="agregarAlCarritoSilencioso('Té Vital', 25000, 'cant-1')">+ Carrito</button>
-					<a href="https://wa.me/" class="btn-whatsapp" target="_blank">Pedir <i class="fa fa-angle-right"></i></a>
+					<a href="#" class="btn-whatsapp">Pedir <i class="fa fa-angle-right"></i></a>
 				</div>
 			</article>
 
-			<!-- Producto 2 -->
 			<article class="producto-card">
-				<img src="img/granola.png" alt="Granola Nativa">
+				<img src="img/granola-nativa.jpg" alt="Granola Nativa">
 				<h3>Granola Nativa</h3>
 				<p>Granola artesanal con frutos secos de estación.</p>
+				<span class="precio-producto">$18.000 COP</span>
 				<div class="cantidad-contenedor">
 					<button class="btn-cantidad" onclick="cambiarCantidad('cant-2', -1)">-</button>
 					<input type="text" id="cant-2" class="input-cantidad" value="1" readonly>
@@ -104,15 +105,15 @@
 				</div>
 				<div class="acciones-producto">
 					<button class="btn-agregar-cart" onclick="agregarAlCarritoSilencioso('Granola Nativa', 18000, 'cant-2')">+ Carrito</button>
-					<a href="https://wa.me/" class="btn-whatsapp" target="_blank">Pedir <i class="fa fa-angle-right"></i></a>
+					<a href="#" class="btn-whatsapp">Pedir <i class="fa fa-angle-right"></i></a>
 				</div>
 			</article>
 
-			<!-- Producto 3 -->
 			<article class="producto-card">
-				<img src="img/miel.png" alt="Miel de Montaña">
+				<img src="img/miel-montana.jpg" alt="Miel de Montaña">
 				<h3>Miel de Montaña</h3>
 				<p>Miel natural extraída de flores silvestres locales.</p>
+				<span class="precio-producto">$22.000 COP</span>
 				<div class="cantidad-contenedor">
 					<button class="btn-cantidad" onclick="cambiarCantidad('cant-3', -1)">-</button>
 					<input type="text" id="cant-3" class="input-cantidad" value="1" readonly>
@@ -120,15 +121,15 @@
 				</div>
 				<div class="acciones-producto">
 					<button class="btn-agregar-cart" onclick="agregarAlCarritoSilencioso('Miel de Montaña', 22000, 'cant-3')">+ Carrito</button>
-					<a href="https://wa.me/" class="btn-whatsapp" target="_blank">Pedir <i class="fa fa-angle-right"></i></a>
+					<a href="#" class="btn-whatsapp">Pedir <i class="fa fa-angle-right"></i></a>
 				</div>
 			</article>
 
-			<!-- Producto 4 -->
 			<article class="producto-card">
-				<img src="img/infusion.avif" alt="Infusión Relax">
+				<img src="img/infusion-relax.jpg" alt="Infusión Relax">
 				<h3>Infusión Relax</h3>
 				<p>Combinación herbaria perfecta para relajar la mente.</p>
+				<span class="precio-producto">$24.000 COP</span>
 				<div class="cantidad-contenedor">
 					<button class="btn-cantidad" onclick="cambiarCantidad('cant-4', -1)">-</button>
 					<input type="text" id="cant-4" class="input-cantidad" value="1" readonly>
@@ -136,7 +137,7 @@
 				</div>
 				<div class="acciones-producto">
 					<button class="btn-agregar-cart" onclick="agregarAlCarritoSilencioso('Infusión Relax', 24000, 'cant-4')">+ Carrito</button>
-					<a href="https://wa.me/" class="btn-whatsapp" target="_blank">Pedir <i class="fa fa-angle-right"></i></a>
+					<a href="#" class="btn-whatsapp">Pedir <i class="fa fa-angle-right"></i></a>
 				</div>
 			</article>
 		</div>
@@ -168,14 +169,12 @@
 
 </section>
 
-<!-- PANEL LATERAL DEL CARRITO -->
 <div id="carrito-sidebar" class="carrito-sidebar">
 	<div class="carrito-header">
 		<h3>Tu Carrito Nativa</h3>
 		<button id="btn-cerrar-carrito" class="btn-cerrar">&times;</button>
 	</div>
-	
-	<!-- Vista de Items -->
+
 	<div id="vista-carrito">
 		<div id="carrito-items" class="carrito-body">
 			<p class="carrito-vacio">El carrito está vacío.</p>
@@ -189,7 +188,6 @@
 		</div>
 	</div>
 
-	<!-- Vista del Formulario de Envío y Pago -->
 	<div id="vista-checkout" style="display: none; padding: 20px; overflow-y: auto;">
 		<h4 style="color: #285943; margin-bottom: 10px;">Datos de Envío y Pago</h4>
 		<form class="form-checkout" onsubmit="procesarPedido(event)">
@@ -225,7 +223,6 @@
 	</div>
 </div>
 
-<!-- SCRIPT JS MEJORADO -->
 <script>
 	let carrito = [];
 
@@ -261,9 +258,8 @@
 			carrito.push({ nombre, precio, cantidad });
 		}
 		
-		document.getElementById(inputId).value = 1; // Restablece input
+		document.getElementById(inputId).value = 1;
 		actualizarCarrito();
-		// Nota: No se abre el sidebar intencionalmente
 	}
 
 	function actualizarCarrito() {
