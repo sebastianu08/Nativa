@@ -1,0 +1,598 @@
+/* 
+1. El orden de definición es de forma alfabética: html, identificadores, clases.
+2. Atributos ordenados lógicamente para diseño moderno.
+*/
+
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F3EBDD; /* Fondo beige base de las secciones inferiores */
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #285943;
+}
+
+/* ---------------- CONTENEDOR PRINCIPAL ---------------- */
+#contenedor {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #F3EBDD;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.05);
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+	background-color: #FFFFFF;
+	height: 90px;
+	width: 1000px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 40px;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.logo-texto {
+	color: #285943;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+
+nav ul li {
+	display: inline-block;
+	font-size: 14px;
+	margin-left: 25px;
+	font-weight: 500;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #285943;
+	transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+	color: #6F9E73;
+}
+
+.btn-header {
+	background: #285943;
+	color: #FFFFFF !important;
+	padding: 10px 20px;
+	border-radius: 4px;
+	font-weight: 600;
+}
+
+.btn-header:hover {
+	background: #1e4533;
+}
+
+/* ---------------- BANNER / HERO SECTION ---------------- */
+#banner {
+	background-color: #F3EBDD;
+	height: 480px;
+	width: 1000px;
+	padding: 60px 40px;
+	position: relative;
+}
+
+#promo1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	width: 50%;
+}
+
+#promo1 h1 {
+	font-size: 44px;
+	color: #285943;
+	margin-bottom: 30px;
+	line-height: 1.2;
+}
+
+.texto-cursiva {
+	font-family: "Lora", serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.botones-hero {
+	display: flex;
+	gap: 15px;
+}
+
+.btn-primario, .btn-secundario {
+	text-decoration: none;
+	padding: 15px 25px;
+	font-size: 14px;
+	border-radius: 4px;
+	text-align: center;
+	font-weight: 700;
+	transition: all 0.3s ease;
+}
+
+.btn-primario {
+	background-color: #285943;
+	color: #FFFFFF;
+}
+
+.btn-secundario {
+	background-color: transparent;
+	color: #285943;
+	border: 2px solid #285943;
+}
+
+.imagen-hero {
+	position: absolute;
+	right: 40px;
+	top: 60px;
+	width: 420px;
+	height: 320px;
+	overflow: hidden;
+}
+
+.imagen-hero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ---------------- BENEFICIOS ---------------- */
+#beneficios {
+	background-color: #FFFFFF;
+	height: 120px;
+	width: 1000px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.beneficio-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.icono-beneficio {
+	color: #6F9E73;
+	font-size: 24px;
+}
+
+.beneficio-item h2 {
+	font-size: 15px;
+	font-weight: 600;
+	color: #285943;
+}
+
+/* ---------------- PRODUCTOS ---------------- */
+#productos {
+	background-color: #F3EBDD;
+	padding: 60px 40px;
+	width: 1000px;
+}
+
+.encabezado-productos {
+	margin-bottom: 40px;
+}
+
+.encabezado-productos h4 {
+	color: #C97852; /* Terracota para llamados de atención */
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.encabezado-productos h2 {
+	color: #285943;
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.grilla-productos {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.producto-card {
+	background-color: #FFFFFF;
+	width: 215px;
+	border-radius: 10px;
+	padding: 15px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+	text-align: left;
+}
+
+.producto-card img {
+	width: 100%;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+
+.producto-card h3 {
+	color: #285943;
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+
+.producto-card p {
+	color: #666;
+	font-size: 12px;
+	line-height: 1.4;
+	margin-bottom: 15px;
+	height: 35px;
+}
+
+.btn-whatsapp {
+	color: #C97852;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+	background-color: #F3EBDD;
+	height: auto;
+	width: 1000px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: 1px solid #e3d9c8;
+}
+
+.contacto-info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	color: #285943;
+	font-weight: 600;
+	font-size: 15px;
+	margin-bottom: 30px;
+	padding: 0 50px;
+}
+
+.envios-badge a {
+	background-color: #285943;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 12px 30px;
+	border-radius: 25px;
+	font-weight: 700;
+	font-size: 14px;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.fa:hover {
+	opacity: 0.8;
+}
+/* ---------------- ESTILOS DEL CARRITO ---------------- */
+
+/* Botón Carrito en Header */
+.btn-carrito-icon {
+	background: #F3EBDD;
+	border: none;
+	color: #285943;
+	padding: 8px 12px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+#carrito-contador {
+	background-color: #C97852; /* Terracota */
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 2px 6px;
+	border-radius: 50%;
+}
+
+/* Acciones en la tarjeta de producto */
+.acciones-producto {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.btn-agregar-cart {
+	background-color: #285943;
+	color: #FFFFFF;
+	border: none;
+	padding: 6px 10px;
+	border-radius: 4px;
+	font-size: 11px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.btn-agregar-cart:hover {
+	background-color: #6F9E73;
+}
+
+/* Sidebar del Carrito deslizable */
+.carrito-sidebar {
+	position: fixed;
+	top: 0;
+	right: -350px;
+	width: 320px;
+	height: 100vh;
+	background-color: #FFFFFF;
+	box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+	display: flex;
+	flex-direction: column;
+	transition: right 0.3s ease;
+	z-index: 1000;
+}
+
+.carrito-sidebar.active {
+	right: 0;
+}
+
+.carrito-header {
+	background-color: #285943;
+	color: #FFFFFF;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn-cerrar {
+	background: none;
+	border: none;
+	color: #FFFFFF;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.carrito-body {
+	padding: 20px;
+	flex: 1;
+	overflow-y: auto;
+}
+
+.carrito-vacio {
+	color: #888;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.item-carrito {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+	font-size: 13px;
+	color: #285943;
+}
+
+.btn-eliminar {
+	background: none;
+	border: none;
+	color: #C97852;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.carrito-footer {
+	padding: 20px;
+	background-color: #F3EBDD;
+	border-top: 1px solid #e3d9c8;
+}
+
+.total-box {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 700;
+	font-size: 16px;
+	color: #285943;
+	margin-bottom: 15px;
+}
+
+.btn-checkout {
+	width: 100%;
+	background-color: #C97852; /* Terracota promocional */
+	color: #FFFFFF;
+	border: none;
+	padding: 12px;
+	border-radius: 6px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.btn-checkout:hover {
+	background-color: #b0623f;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+#nosotros {
+	background-color: #FFFFFF;
+	padding: 60px 40px;
+	width: 1000px;
+	border-top: 1px solid #eaeaea;
+}
+
+.nosotros-contenido {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.nosotros-texto {
+	width: 50%;
+}
+
+.nosotros-texto h4 {
+	color: #C97852; /* Terracota */
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.nosotros-texto h2 {
+	color: #285943; /* Verde Bosque */
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.nosotros-texto p {
+	color: #4a5568;
+	font-size: 14px;
+	line-height: 1.6;
+	margin-bottom: 12px;
+}
+
+.nosotros-imagen {
+	width: 50%;
+	height: 280px;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.nosotros-imagen img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#beneficios,
+#productos,
+#nosotros {
+	scroll-margin-top: 100px; /* Evita que el header tape el inicio de la sección */
+}
+
+/* ---------------- ANIMACIÓN HOVER EN PRODUCTOS ---------------- */
+.producto-card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 20px rgba(40, 89, 67, 0.15);
+}
+
+/* ---------------- CONTROLES DE CANTIDAD EN PRODUCTOS ---------------- */
+.cantidad-contenedor {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin: 10px 0;
+}
+
+.btn-cantidad {
+	background-color: #F3EBDD;
+	color: #285943;
+	border: 1px solid #285943;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.btn-cantidad:hover {
+	background-color: #6F9E73;
+	color: #FFFFFF;
+}
+
+.input-cantidad {
+	width: 35px;
+	text-align: center;
+	font-weight: 600;
+	color: #285943;
+	border: none;
+	background: transparent;
+	font-size: 14px;
+}
+
+/* ---------------- FORMULARIO DE CHECKOUT Y PAGO ---------------- */
+.form-checkout {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 15px;
+	text-align: left;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.form-group label {
+	font-size: 11px;
+	font-weight: 700;
+	color: #285943;
+}
+
+.form-group input, 
+.form-group select {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+}
+
+.btn-confirmar-pago {
+	width: 100%;
+	background-color: #285943;
+	color: #FFFFFF;
+	border: none;
+	padding: 12px;
+	border-radius: 6px;
+	font-weight: 700;
+	margin-top: 10px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.btn-confirmar-pago:hover {
+	background-color: #1e4533;
+}

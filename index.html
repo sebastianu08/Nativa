@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+	<meta charset="utf-8"/>
+	<title>NATIVA - Landing Page</title>
+	<meta name="description" content="Página de NATIVA - Lo natural también puede transformar tu día">
+	<link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<section id="contenedor">
+
+	<header id="header-fijo">
+	<div class="logo-container">
+		<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 15 C30 35 30 65 50 85 C70 65 70 35 50 15 Z' fill='%236F9E73'/><path d='M50 15 L50 85' stroke='%23285943' stroke-width='4'/><path d='M50 40 L65 30' stroke='%23285943' stroke-width='3'/><path d='M50 55 L35 45' stroke='%23285943' stroke-width='3'/></svg>" width="40" height="40" alt="Logo Nativa">
+		<span class="logo-texto">NATIVA</span>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="#beneficios">Beneficios</a></li>
+			<li><a href="#productos">Productos</a></li>
+			<li><a href="#nosotros">Nosotros</a></li>
+			<li><a href="#productos" class="btn-header">QUIERO MI PRODUCTO</a></li>
+			<li>
+				<button id="btn-carrito-nav" class="btn-carrito-icon">
+					<i class="fa fa-shopping-cart"></i>
+					<span id="carrito-contador">0</span>
+				</button>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+	<section id="banner">
+		<article id="promo1">
+			<h1>Lo natural también<br/>puede <span class="texto-cursiva">transformar tu día</span></h1>
+			
+			<div class="botones-hero">
+				<a href="#productos" class="btn-primario">QUIERO MI PRODUCTO</a>
+				<a href="#productos" class="btn-secundario">CONOCER LA LÍNEA</a>
+			</div>
+			
+			<div class="imagen-hero">
+				<img src="img/te.avif" alt="Té Vital Preparación">
+			</div>
+		</article>
+	</section>
+
+	<section id="beneficios">
+		<article class="beneficio-item">
+			<i class="fa fa-leaf icono-beneficio"></i>
+			<h2>100% Natural</h2>
+		</article>
+		<article class="beneficio-item">
+			<i class="fa fa-hand-paper-o icono-beneficio"></i>
+			<h2>Artesanal</h2>
+		</article>
+		<article class="beneficio-item">
+			<i class="fa fa-heartbeat icono-beneficio"></i>
+			<h2>Saludable</h2>
+		</article>
+		<article class="beneficio-item">
+			<i class="fa fa-map-marker icono-beneficio"></i>
+			<h2>Producción Local</h2>
+		</article>
+	</section>
+
+	<section id="productos">
+		<div class="encabezado-productos">
+			<h4>CATÁLOGO CUIDADO</h4>
+			<h2>NUESTRA LÍNEA DE PRODUCTOS</h2>
+		</div>
+		
+		<div class="grilla-productos">
+			<!-- Producto 1 -->
+			<article class="producto-card">
+				<img src="img/te.avif" alt="Té Vital">
+				<h3>Té Vital</h3>
+				<p>Mezcla natural para comenzar el día con energía.</p>
+				<div class="cantidad-contenedor">
+					<button class="btn-cantidad" onclick="cambiarCantidad('cant-1', -1)">-</button>
+					<input type="text" id="cant-1" class="input-cantidad" value="1" readonly>
+					<button class="btn-cantidad" onclick="cambiarCantidad('cant-1', 1)">+</button>
+				</div>
+				<div class="acciones-producto">
+					<button class="btn-agregar-cart" onclick="agregarAlCarritoSilencioso('Té Vital', 25000, 'cant-1')">+ Carrito</button>
+					<a href="https://wa.me/" class="btn-whatsapp" target="_blank">Pedir <i class="fa fa-angle-right"></i></a>
+				</div>
+			</article>
+
+			<!-- Producto 2 -->
+			<article class="producto-card">
+				<img src="img/granola.png" alt="Granola Nativa">
+				<h3>Granola Nativa</h3>
+				<p>Granola artesanal con frutos secos de estación.</p>
+				<div class="cantidad-contenedor">
+					<button class="btn-cantidad" onclick="cambiarCantidad('cant-2', -1)">-</button>
+					<input type="text" id="cant-2" class="input-cantidad" value="1" readonly>
+					<button class="btn-cantidad" onclick="cambiarCantidad('cant-2', 1)">+</button>
+				</div>
+				<div class="acciones-producto">
+					<button class="btn-agregar-cart" onclick="agregarAlCarritoSilencioso('Granola Nativa', 18000, 'cant-2')">+ Carrito</button>
+					<a href="https://wa.me/" class="btn-whatsapp" target="_blank">Pedir <i class="fa fa-angle-right"></i></a>
+				</div>
+			</article>
+
+			<!-- Producto 3 -->
+			<article class="producto-card">
+				<img src="img/miel.png" alt="Miel de Montaña">
+				<h3>Miel de Montaña</h3>
+				<p>Miel natural extraída de flores silvestres locales.</p>
+				<div class="cantidad-contenedor">
+					<button class="btn-cantidad" onclick="cambiarCantidad('cant-3', -1)">-</button>
+					<input type="text" id="cant-3" class="input-cantidad" value="1" readonly>
+					<button class="btn-cantidad" onclick="cambiarCantidad('cant-3', 1)">+</button>
+				</div>
+				<div class="acciones-producto">
+					<button class="btn-agregar-cart" onclick="agregarAlCarritoSilencioso('Miel de Montaña', 22000, 'cant-3')">+ Carrito</button>
+					<a href="https://wa.me/" class="btn-whatsapp" target="_blank">Pedir <i class="fa fa-angle-right"></i></a>
+				</div>
+			</article>
+
+			<!-- Producto 4 -->
+			<article class="producto-card">
+				<img src="img/infusion.avif" alt="Infusión Relax">
+				<h3>Infusión Relax</h3>
+				<p>Combinación herbaria perfecta para relajar la mente.</p>
+				<div class="cantidad-contenedor">
+					<button class="btn-cantidad" onclick="cambiarCantidad('cant-4', -1)">-</button>
+					<input type="text" id="cant-4" class="input-cantidad" value="1" readonly>
+					<button class="btn-cantidad" onclick="cambiarCantidad('cant-4', 1)">+</button>
+				</div>
+				<div class="acciones-producto">
+					<button class="btn-agregar-cart" onclick="agregarAlCarritoSilencioso('Infusión Relax', 24000, 'cant-4')">+ Carrito</button>
+					<a href="https://wa.me/" class="btn-whatsapp" target="_blank">Pedir <i class="fa fa-angle-right"></i></a>
+				</div>
+			</article>
+		</div>
+	</section>
+  
+<section id="nosotros">
+	<div class="nosotros-contenido">
+		<div class="nosotros-texto">
+			<h4>NUESTRA HISTORIA</h4>
+			<h2>Sobre NATIVA</h2>
+			<p>NATIVA nace del compromiso con el bienestar y el consumo responsable en Colombia. Elaboramos productos artesanales combinando ingredientes naturales y locales para transformar tu rutina diaria.</p>
+			<p>Creemos en el poder de lo natural, ofreciéndote opciones saludables, frescas y respetuosas con el medio ambiente.</p>
+		</div>
+		<div class="nosotros-imagen">
+			<img src="img/nosotros.avif" alt="Filosofía NATIVA">
+		</div>
+	</div>
+</section>
+  
+	<footer>
+		<div class="contacto-info">
+			<span><i class="fa fa-phone"></i> +57 300 000 0000</span>
+			<span class="instagram"><i class="fa fa-instagram"></i> @nativa.oficial</span>
+		</div>
+		<div class="envios-badge">
+			<a href="https://wa.me/" target="_blank"><i class="fa fa-truck"></i> Envíos a todo el país</a>
+		</div>
+	</footer>
+
+</section>
+
+<!-- PANEL LATERAL DEL CARRITO -->
+<div id="carrito-sidebar" class="carrito-sidebar">
+	<div class="carrito-header">
+		<h3>Tu Carrito Nativa</h3>
+		<button id="btn-cerrar-carrito" class="btn-cerrar">&times;</button>
+	</div>
+	
+	<!-- Vista de Items -->
+	<div id="vista-carrito">
+		<div id="carrito-items" class="carrito-body">
+			<p class="carrito-vacio">El carrito está vacío.</p>
+		</div>
+		<div class="carrito-footer">
+			<div class="total-box">
+				<span>Total:</span>
+				<span id="carrito-total">$0 COP</span>
+			</div>
+			<button class="btn-checkout" onclick="mostrarFormularioEnvio()">Finalizar Compra</button>
+		</div>
+	</div>
+
+	<!-- Vista del Formulario de Envío y Pago -->
+	<div id="vista-checkout" style="display: none; padding: 20px; overflow-y: auto;">
+		<h4 style="color: #285943; margin-bottom: 10px;">Datos de Envío y Pago</h4>
+		<form class="form-checkout" onsubmit="procesarPedido(event)">
+			<div class="form-group">
+				<label>Nombre Completo</label>
+				<input type="text" required placeholder="Ej: Juan Pérez">
+			</div>
+			<div class="form-group">
+				<label>Dirección de Entrega</label>
+				<input type="text" required placeholder="Ej: Calle 45 #20-10">
+			</div>
+			<div class="form-group">
+				<label>Ciudad</label>
+				<input type="text" required placeholder="Ej: Barranquilla">
+			</div>
+			<div class="form-group">
+				<label>Teléfono de Contacto</label>
+				<input type="tel" required placeholder="Ej: 3001234567">
+			</div>
+			<div class="form-group">
+				<label>Método de Pago</label>
+				<select required>
+					<option value="">Seleccione una opción</option>
+					<option value="pse">PSE / Transferencia</option>
+					<option value="nequi">Nequi / Daviplata</option>
+					<option value="tarjeta">Tarjeta de Crédito / Débito</option>
+					<option value="contraentrega">Pago Contra Entrega</option>
+				</select>
+			</div>
+			<button type="submit" class="btn-confirmar-pago">Confirmar Pedido</button>
+			<button type="button" class="btn-secundario" style="width:100%; margin-top:5px;" onclick="volverAlCarrito()">Volver al Carrito</button>
+		</form>
+	</div>
+</div>
+
+<!-- SCRIPT JS MEJORADO -->
+<script>
+	let carrito = [];
+
+	const btnCarritoNav = document.getElementById('btn-carrito-nav');
+	const btnCerrarCarrito = document.getElementById('btn-cerrar-carrito');
+	const sidebar = document.getElementById('carrito-sidebar');
+	const carritoItemsContainer = document.getElementById('carrito-items');
+	const carritoContador = document.getElementById('carrito-contador');
+	const carritoTotal = document.getElementById('carrito-total');
+
+	btnCarritoNav.addEventListener('click', () => {
+		sidebar.classList.add('active');
+		volverAlCarrito();
+	});
+
+	btnCerrarCarrito.addEventListener('click', () => sidebar.classList.remove('active'));
+
+	function cambiarCantidad(inputId, delta) {
+		const input = document.getElementById(inputId);
+		let valorActual = parseInt(input.value) || 1;
+		valorActual += delta;
+		if (valorActual < 1) valorActual = 1;
+		input.value = valorActual;
+	}
+
+	function agregarAlCarritoSilencioso(nombre, precio, inputId) {
+		const cantidad = parseInt(document.getElementById(inputId).value) || 1;
+		
+		const itemExistente = carrito.find(item => item.nombre === nombre);
+		if (itemExistente) {
+			itemExistente.cantidad += cantidad;
+		} else {
+			carrito.push({ nombre, precio, cantidad });
+		}
+		
+		document.getElementById(inputId).value = 1; // Restablece input
+		actualizarCarrito();
+		// Nota: No se abre el sidebar intencionalmente
+	}
+
+	function actualizarCarrito() {
+		let totalItems = 0;
+		let totalPrecio = 0;
+
+		carritoItemsContainer.innerHTML = '';
+		
+		if (carrito.length === 0) {
+			carritoItemsContainer.innerHTML = '<p class="carrito-vacio">El carrito está vacío.</p>';
+			carritoContador.innerText = '0';
+			carritoTotal.innerText = '$0 COP';
+			return;
+		}
+
+		carrito.forEach((item, index) => {
+			totalItems += item.cantidad;
+			totalPrecio += (item.precio * item.cantidad);
+
+			const div = document.createElement('div');
+			div.classList.add('item-carrito');
+			div.innerHTML = `
+				<div>
+					<strong>${item.nombre}</strong><br>
+					<small>${item.cantidad}x $${item.precio.toLocaleString()}</small>
+				</div>
+				<span>$${(item.precio * item.cantidad).toLocaleString()}</span>
+				<button class="btn-eliminar" onclick="eliminarDelCarrito(${index})">&times;</button>
+			`;
+			carritoItemsContainer.appendChild(div);
+		});
+
+		carritoContador.innerText = totalItems;
+		carritoTotal.innerText = `$${totalPrecio.toLocaleString()} COP`;
+	}
+
+	function eliminarDelCarrito(index) {
+		carrito.splice(index, 1);
+		actualizarCarrito();
+	}
+
+	function mostrarFormularioEnvio() {
+		if (carrito.length === 0) {
+			alert('El carrito está vacío. Agrega productos antes de finalizar la compra.');
+			return;
+		}
+		document.getElementById('vista-carrito').style.display = 'none';
+		document.getElementById('vista-checkout').style.display = 'block';
+	}
+
+	function volverAlCarrito() {
+		document.getElementById('vista-checkout').style.display = 'none';
+		document.getElementById('vista-carrito').style.display = 'block';
+	}
+
+	function procesarPedido(e) {
+		e.preventDefault();
+		alert('¡Gracias por tu compra! Tu pedido ha sido registrado con éxito.');
+		carrito = [];
+		actualizarCarrito();
+		volverAlCarrito();
+		sidebar.classList.remove('active');
+	}
+</script>
+
+</body>
+</html>
