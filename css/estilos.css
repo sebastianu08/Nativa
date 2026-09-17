@@ -11,13 +11,12 @@
 }
 
 body {
-	background-color: #F3EBDD; /* Fondo beige base de las secciones inferiores */
+	background-color: #F3EBDD; 
 	font-family: "Montserrat", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #285943;
 }
 
-/* ---------------- CONTENEDOR PRINCIPAL ---------------- */
 #contenedor {
 	width: 1000px;
 	margin: 0 auto;
@@ -25,7 +24,6 @@ body {
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.05);
 }
 
-/* ---------------- HEADER ---------------- */
 header {
 	background-color: #FFFFFF;
 	height: 90px;
@@ -83,7 +81,6 @@ nav ul li a:hover {
 	background: #1e4533;
 }
 
-/* ---------------- BANNER / HERO SECTION ---------------- */
 #banner {
 	background-color: #F3EBDD;
 	height: 480px;
@@ -154,7 +151,6 @@ nav ul li a:hover {
 	object-fit: cover;
 }
 
-/* ---------------- BENEFICIOS ---------------- */
 #beneficios {
 	background-color: #FFFFFF;
 	height: 120px;
@@ -183,7 +179,6 @@ nav ul li a:hover {
 	color: #285943;
 }
 
-/* ---------------- PRODUCTOS ---------------- */
 #productos {
 	background-color: #F3EBDD;
 	padding: 60px 40px;
@@ -195,8 +190,7 @@ nav ul li a:hover {
 }
 
 .encabezado-productos h4 {
-	color: #C97852; /* Terracota para llamados de atención */
-	font-size: 12px;
+	color: #C97852; 
 	font-weight: 700;
 	letter-spacing: 1px;
 	margin-bottom: 5px;
@@ -257,7 +251,6 @@ nav ul li a:hover {
 	gap: 5px;
 }
 
-/* ---------------- FOOTER ---------------- */
 footer {
 	background-color: #F3EBDD;
 	height: auto;
@@ -296,9 +289,7 @@ footer {
 .fa:hover {
 	opacity: 0.8;
 }
-/* ---------------- ESTILOS DEL CARRITO ---------------- */
 
-/* Botón Carrito en Header */
 .btn-carrito-icon {
 	background: #F3EBDD;
 	border: none;
@@ -314,7 +305,7 @@ footer {
 }
 
 #carrito-contador {
-	background-color: #C97852; /* Terracota */
+	background-color: #C97852;
 	color: #FFFFFF;
 	font-size: 11px;
 	font-weight: 700;
@@ -322,7 +313,6 @@ footer {
 	border-radius: 50%;
 }
 
-/* Acciones en la tarjeta de producto */
 .acciones-producto {
 	display: flex;
 	align-items: center;
@@ -346,7 +336,6 @@ footer {
 	background-color: #6F9E73;
 }
 
-/* Sidebar del Carrito deslizable */
 .carrito-sidebar {
 	position: fixed;
 	top: 0;
@@ -429,7 +418,7 @@ footer {
 
 .btn-checkout {
 	width: 100%;
-	background-color: #C97852; /* Terracota promocional */
+	background-color: #C97852; 
 	color: #FFFFFF;
 	border: none;
 	padding: 12px;
@@ -464,7 +453,7 @@ html {
 }
 
 .nosotros-texto h4 {
-	color: #C97852; /* Terracota */
+	color: #C97852;
 	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -472,7 +461,7 @@ html {
 }
 
 .nosotros-texto h2 {
-	color: #285943; /* Verde Bosque */
+	color: #285943;
 	font-size: 28px;
 	font-weight: 700;
 	margin-bottom: 15px;
@@ -501,10 +490,9 @@ html {
 #beneficios,
 #productos,
 #nosotros {
-	scroll-margin-top: 100px; /* Evita que el header tape el inicio de la sección */
+	scroll-margin-top: 100px;
 }
 
-/* ---------------- ANIMACIÓN HOVER EN PRODUCTOS ---------------- */
 .producto-card {
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -514,7 +502,6 @@ html {
 	box-shadow: 0 12px 20px rgba(40, 89, 67, 0.15);
 }
 
-/* ---------------- CONTROLES DE CANTIDAD EN PRODUCTOS ---------------- */
 .cantidad-contenedor {
 	display: flex;
 	align-items: center;
@@ -550,7 +537,6 @@ html {
 	font-size: 14px;
 }
 
-/* ---------------- FORMULARIO DE CHECKOUT Y PAGO ---------------- */
 .form-checkout {
 	display: flex;
 	flex-direction: column;
@@ -595,4 +581,13 @@ html {
 
 .btn-confirmar-pago:hover {
 	background-color: #1e4533;
+}
+
+.precio-producto {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	color: #285943;
+	margin: 8px 0;
+	text-align: center;
 }
